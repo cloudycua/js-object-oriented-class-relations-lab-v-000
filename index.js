@@ -20,7 +20,7 @@ class Passenger {
 }
 
 class Trip {
-  constructor(driverId, passengerId) {
-
+  constructor(driver, passenger) {
+    
   }
 }
