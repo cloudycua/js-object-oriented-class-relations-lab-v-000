@@ -17,5 +17,3 @@ class Passenger {
     this.name = name;
   }
 }
-
-
