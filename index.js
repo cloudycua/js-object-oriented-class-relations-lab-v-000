@@ -51,11 +51,13 @@ class Trip {
     this.id = tripId++;
     store.trips.push(this);
   }
+  // relates driver based on driverId
   driver() {
     return store.drivers.find(driver => {
       return driver.id === this.driverId;
     });
   }
+  // relates passenger based on driverId
   passenger() {
     return store.passengers.find(passenger => {
       return passenger.id === this.passengerId;
