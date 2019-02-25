@@ -10,11 +10,13 @@ class Driver {
     this.name = name;
     store.drivers.push(this);
   }
+  // has trips
   trips() {
     return store.trips.filter(trip => {
       return trip.driverId == this.id;
     });
   }
+  // has passengers
   passengers() {
     return this.trips().map(trip => {
       return trip.passenger();
@@ -28,11 +30,13 @@ class Passenger {
     this.name = name;
     store.passengers.push(this);
   }
+  // has trips
   trips() {
     return store.trips.filter(trip => {
       return trip.passengerId == this.id;
     });
   }
+  // has drivers
   drivers() {
     return this.trips().map(trip => {
       return trip.driver();
